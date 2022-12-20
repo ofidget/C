@@ -39,36 +39,55 @@
 
 // // [-4, -6, 89, 6] -> 0
 
-Console.WriteLine("Программа поиска суммы элементов, стоящих  на нечетных позициях в случайно заполненном массиве");
-void FillArray( int[] arr)
-{
-   Random random = new Random(); 
-    for(int i=0; i<arr.GetLength(0); i++)
-    {
-            arr[i]= random.Next(-100,999);
-    }
-} 
- void PrintArray( int[] arr)
-{
+// Console.WriteLine("Программа поиска суммы элементов, стоящих  на нечетных позициях в случайно заполненном массиве");
+// void FillArray( int[] arr)
+// {
+//    Random random = new Random(); 
+//     for(int i=0; i<arr.GetLength(0); i++)
+//     {
+//             arr[i]= random.Next(-100,999);
+//     }
+// } 
+//  void PrintArray( int[] arr)
+// {
  
-    for(int i=0; i<arr.GetLength(0); i++)
+//     for(int i=0; i<arr.GetLength(0); i++)
     
-     {Console.Write(arr[i] + " ");
-     }   
+//      {Console.Write(arr[i] + " ");
+//      }   
        
-}
-int arrayCount = 7;
-int [] array = new int[arrayCount];
-int Sum = 0;
-FillArray(array);
-PrintArray(array);
-Console.WriteLine();
- for(int i=0; i < array.GetLength(0); i=i+2)
-    {
-      Sum = array[i] + Sum;
-    }
-Console.WriteLine("сумма элементов, стоящих на нечетных позициях " + Sum); //с точки зрения пользователя, когда первый элемент соответствует индексу i=0
+// }
+// int arrayCount = 7;
+// int [] array = new int[arrayCount];
+// int Sum = 0;
+// FillArray(array);
+// PrintArray(array);
+// Console.WriteLine();
+//  for(int i=0; i < array.GetLength(0); i=i+2)
+//     {
+//       Sum = array[i] + Sum;
+//     }
+// Console.WriteLine("сумма элементов, стоящих на нечетных позициях " + Sum); //с точки зрения пользователя, когда первый элемент соответствует индексу i=0
 
 // // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом массива.
 
 // // [3.3 7.76 22 2 78.67] -> 76.67
+
+double[] arr = {12.895, -15.96587, 3, 0, -2, 17.33};
+Console.WriteLine(arr);
+double Min = arr[0];
+for (int i=0; i<arr.GetLength(0);  i++)
+ {Console.Write(arr[i] + "   ");;
+ if (Min > arr[i]) 
+ {Min = arr[i]; 
+ }
+ }
+ double Max = arr[0];
+    for (int j=1; j<arr.GetLength(0);  j++)
+        if (Max < arr[j]) 
+        {Max = arr[j]; 
+        }
+Console.WriteLine(Max);
+Console.WriteLine("разница между максимальным и минимальным элементами массива " + (Max - Min));
+
+    
