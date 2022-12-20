@@ -4,44 +4,33 @@
 // // [345, 897, 568, 234] -> 2
 
 Console.WriteLine("Программа поиска количества четных чисел в случайно заполненном трехзначными положительными числами  массиве");
-void FillArray( int[,] arr)
+void FillArray( int[] arr)
 {
    Random random = new Random(); 
     for(int i=0; i<arr.GetLength(0); i++)
     {
-    for(int j=0; j<arr.GetLength(1); j++)
-        {   
-        arr[i,j]= random.Next(100,999);
-        }
+            arr[i]= random.Next(100,999);
     }
 } 
- 
-void PrintArray( int[,] arr)
+ void PrintArray( int[] arr)
 {
  
     for(int i=0; i<arr.GetLength(0); i++)
-    {
-    for(int j=0; j<arr.GetLength(1); j++)
-        {   
-        Console.Write(arr[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-    }
-int rowCount = 3;
-int columnCount = 4;
-int [,] array = new int[rowCount,columnCount];
+    
+     {Console.Write(arr[i] + " ");
+     }   
+       
+}
+int arrayCount = 7;
+int [] array = new int[arrayCount];
 int Count = 0;
 FillArray(array);
 PrintArray(array);
 Console.WriteLine();
  for(int i=0; i < array.GetLength(0); i++)
     {
-    for(int j=0; j < array.GetLength(1); j++)
-        {   
-            if (array[i,j] % 2 == 0)
+            if (array[i] % 2 == 0)
             Count++;
-        }
     }
 Console.WriteLine("количество четных чисел в представленном массиве " + Count);
 // // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
