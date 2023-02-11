@@ -26,11 +26,11 @@
 // // 14 -> нет
 // // 46 -> нет
 // // 161 -> да
-Console.WriteLine("Введите число");
-int L = Convert.ToInt32(Console.ReadLine());
-if (L%23 == 0 || L%73 == 0)
-{
-    Console.WriteLine("Введенное число четно одновременно 23 и 7");
-}
-else Console.WriteLine("Введенное число  НЕ ЧЕТНО одновременно 23 и 7");
+// Console.WriteLine("Введите число");
+// int L = Convert.ToInt32(Console.ReadLine());
+// if (L%23 == 0 || L%73 == 0)
+// {
+//     Console.WriteLine("Введенное число четно одновременно 23 и 7");
+// }
+// else Console.WriteLine("Введенное число  НЕ ЧЕТНО одновременно 23 и 7");
 // добавила второе задание
